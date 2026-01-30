@@ -1,6 +1,7 @@
 import { html, nothing } from "lit";
 
 import { formatEventPayload } from "../presenter";
+import { t } from "../i18n/index.js";
 import type { EventLogEntry } from "../app-events";
 
 export type DebugProps = {
@@ -42,11 +43,11 @@ export function renderDebug(props: DebugProps) {
       <div class="card">
         <div class="row" style="justify-content: space-between;">
           <div>
-            <div class="card-title">Snapshots</div>
-            <div class="card-sub">Status, health, and heartbeat data.</div>
+            <div class="card-title">${t("debug.snapshot")}</div>
+            <div class="card-sub">${t("debug.sub")}</div>
           </div>
           <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-            ${props.loading ? "Refreshing…" : "Refresh"}
+            ${props.loading ? t("common.loading") : t("overview.refresh")}
           </button>
         </div>
         <div class="stack" style="margin-top: 12px;">

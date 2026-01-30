@@ -1,6 +1,7 @@
 import { html, nothing } from "lit";
 
 import type { LogEntry, LogLevel } from "../types";
+import { t } from "../i18n/index.js";
 
 const LEVELS: LogLevel[] = ["trace", "debug", "info", "warn", "error", "fatal"];
 
@@ -50,12 +51,12 @@ export function renderLogs(props: LogsProps) {
     <section class="card">
       <div class="row" style="justify-content: space-between;">
         <div>
-          <div class="card-title">Logs</div>
-          <div class="card-sub">Gateway file logs (JSONL).</div>
+          <div class="card-title">${t("logs.title")}</div>
+          <div class="card-sub">${t("logs.sub")}</div>
         </div>
         <div class="row" style="gap: 8px;">
           <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-            ${props.loading ? "Loading…" : "Refresh"}
+            ${props.loading ? t("common.loading") : t("overview.refresh")}
           </button>
           <button
             class="btn"

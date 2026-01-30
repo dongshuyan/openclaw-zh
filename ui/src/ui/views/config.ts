@@ -1,5 +1,6 @@
 import { html, nothing } from "lit";
 import type { ConfigUiHints } from "../types";
+import { t } from "../i18n/index.js";
 import { analyzeConfigSchema, renderConfigForm, SECTION_META } from "./config-form";
 import {
   hintForPath,

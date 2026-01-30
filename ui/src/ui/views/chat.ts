@@ -1,6 +1,7 @@
 import { html, nothing } from "lit";
 import { ref } from "lit/directives/ref.js";
 import { repeat } from "lit/directives/repeat.js";
+import { t } from "../i18n/index.js";
 import type { SessionsListResult } from "../types";
 import type { ChatAttachment, ChatQueueItem } from "../ui-types";
 import type { ChatItem, MessageGroup } from "../types/chat-types";
