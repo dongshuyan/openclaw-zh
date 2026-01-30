@@ -204,7 +204,7 @@ export const en: Record<string, string> = {
 
   // WhatsApp
   "whatsapp.title": "WhatsApp",
-  "whatsapp.sub": "Link your WhatsApp Web session.",
+  "whatsapp.sub": "Link WhatsApp Web and monitor connection health.",
   "whatsapp.scanQR": "Scan this QR code with WhatsApp on your phone.",
   "whatsapp.linking": "Linking…",
   "whatsapp.linked": "Linked",
@@ -212,6 +212,14 @@ export const en: Record<string, string> = {
   "whatsapp.link": "Link",
   "whatsapp.unlink": "Unlink",
   "whatsapp.refresh": "Refresh",
+  "whatsapp.showQR": "Show QR",
+  "whatsapp.relink": "Relink",
+  "whatsapp.waitForScan": "Wait for scan",
+  "whatsapp.logout": "Logout",
+  "whatsapp.working": "Working…",
+  "whatsapp.lastConnect": "Last connect",
+  "whatsapp.lastMessage": "Last message",
+  "whatsapp.authAge": "Auth age",
 
   // Telegram
   "telegram.title": "Telegram",

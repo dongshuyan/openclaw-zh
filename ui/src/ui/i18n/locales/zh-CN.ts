@@ -204,7 +204,7 @@ export const zhCN: Record<string, string> = {
 
   // WhatsApp
   "whatsapp.title": "WhatsApp",
-  "whatsapp.sub": "连接你的 WhatsApp Web 会话。",
+  "whatsapp.sub": "连接 WhatsApp Web 并监控连接状态。",
   "whatsapp.scanQR": "使用手机 WhatsApp 扫描此二维码。",
   "whatsapp.linking": "连接中…",
   "whatsapp.linked": "已连接",
@@ -212,6 +212,14 @@ export const zhCN: Record<string, string> = {
   "whatsapp.link": "连接",
   "whatsapp.unlink": "断开",
   "whatsapp.refresh": "刷新",
+  "whatsapp.showQR": "显示二维码",
+  "whatsapp.relink": "重新连接",
+  "whatsapp.waitForScan": "等待扫码",
+  "whatsapp.logout": "退出登录",
+  "whatsapp.working": "处理中…",
+  "whatsapp.lastConnect": "上次连接",
+  "whatsapp.lastMessage": "上次消息",
+  "whatsapp.authAge": "认证时长",
 
   // Telegram
   "telegram.title": "Telegram",

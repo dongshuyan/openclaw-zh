@@ -4,6 +4,7 @@ import { formatAgo } from "../format";
 import type { ChannelAccountSnapshot, TelegramStatus } from "../types";
 import type { ChannelsProps } from "./channels.types";
 import { renderChannelConfigSection } from "./channels.config";
+import { t } from "../i18n/index.js";
 
 export function renderTelegramCard(params: {
   props: ChannelsProps;
@@ -28,16 +29,16 @@ export function renderTelegramCard(params: {
         </div>
         <div class="status-list account-card-status">
           <div>
-            <span class="label">Running</span>
-            <span>${account.running ? "Yes" : "No"}</span>
+            <span class="label">${t("channels.running")}</span>
+            <span>${account.running ? t("channels.yes") : t("channels.no")}</span>
           </div>
           <div>
-            <span class="label">Configured</span>
-            <span>${account.configured ? "Yes" : "No"}</span>
+            <span class="label">${t("channels.configured")}</span>
+            <span>${account.configured ? t("channels.yes") : t("channels.no")}</span>
           </div>
           <div>
-            <span class="label">Last inbound</span>
-            <span>${account.lastInboundAt ? formatAgo(account.lastInboundAt) : "n/a"}</span>
+            <span class="label">${t("channels.lastInbound")}</span>
+            <span>${account.lastInboundAt ? formatAgo(account.lastInboundAt) : t("common.na")}</span>
           </div>
           ${account.lastError
             ? html`
@@ -53,8 +54,8 @@ export function renderTelegramCard(params: {
 
   return html`
     <div class="card">
-      <div class="card-title">Telegram</div>
-      <div class="card-sub">Bot status and channel configuration.</div>
+      <div class="card-title">${t("telegram.title")}</div>
+      <div class="card-sub">${t("telegram.sub")}</div>
       ${accountCountLabel}
 
       ${hasMultipleAccounts
@@ -66,16 +67,16 @@ export function renderTelegramCard(params: {
         : html`
             <div class="status-list" style="margin-top: 16px;">
               <div>
-                <span class="label">Configured</span>
-                <span>${telegram?.configured ? "Yes" : "No"}</span>
+                <span class="label">${t("channels.configured")}</span>
+                <span>${telegram?.configured ? t("channels.yes") : t("channels.no")}</span>
               </div>
               <div>
-                <span class="label">Running</span>
-                <span>${telegram?.running ? "Yes" : "No"}</span>
+                <span class="label">${t("channels.running")}</span>
+                <span>${telegram?.running ? t("channels.yes") : t("channels.no")}</span>
               </div>
               <div>
                 <span class="label">Mode</span>
-                <span>${telegram?.mode ?? "n/a"}</span>
+                <span>${telegram?.mode ?? t("common.na")}</span>
               </div>
               <div>
                 <span class="label">Last start</span>
